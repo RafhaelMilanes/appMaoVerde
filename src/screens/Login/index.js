@@ -30,10 +30,10 @@ const Login = () => {
           }}
           titleStyle={{ fontWeight: "bold", fontSize: 23 }}
           containerStyle={{
-            marginHorizontal: 15,
             height: 72,
             width: 300,
             marginVertical: 400,
+            
           }}
           onPress={() => handleNavRegister()}
         />
