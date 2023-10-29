@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -5,21 +6,21 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
-} from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import Check from "../../../components/check.js";
+  ScrollView,
+} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
+import Check from '../../../components/check.js';
 
 const Perfil = () => {
   const navigation = useNavigation();
 
   const handleNavCalender = () => {
-    navigation.navigate("Perfil2");
+    navigation.navigate('Perfil2');
   };
 
   const handleNavSair = () => {
-    navigation.navigate("Login");
+    navigation.navigate('Login');
   };
   const handleGoBack = () => {
     navigation.goBack();
@@ -27,12 +28,11 @@ const Perfil = () => {
 
   return (
     <SafeAreaView style={estilos.container}>
-      <View>
-        
-      <TouchableOpacity onPress={handleGoBack}>
+      <ScrollView>
+        <TouchableOpacity onPress={handleGoBack}>
           <Image
-            source={require("../../../assets/Voltar.png")}
-            style={{alignItems: "flex-end", marginLeft: 20 }}
+            source={require('../../../assets/Voltar.png')}
+            style={{ alignItems: 'flex-end', marginLeft: 20 }}
           />
         </TouchableOpacity>
 
@@ -223,16 +223,16 @@ const Perfil = () => {
 
 
 
-        <TouchableOpacity 
-          style={{ marginTop: 55}}
+        <TouchableOpacity
+          style={{ marginTop: 55 }}
           onPress={() => handleNavSair()}
         >
           <View style={estilos.botao}>
-            <Text style={{ color: "white", margin: 5 }}>Sair</Text>
+            <Text style={{ color: 'white', margin: 5 }}>Sair</Text>
             <Ionicons name="exit-outline" size={24} color="white" />
           </View>
         </TouchableOpacity>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

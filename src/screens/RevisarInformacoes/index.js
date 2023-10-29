@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
+import { View, Text, StyleSheet, Image, TextInput, ScrollView } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -15,6 +15,7 @@ const FormParticipacao = () => {
   };
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <View style={styles.buttonPerfil}>
         <View style={{ justifyContent: "center" }}>
           <Image source={require("../../../assets/capaParticipacao.png")} />
@@ -46,6 +47,7 @@ const FormParticipacao = () => {
       <TouchableOpacity style={styles.customButton} onPress={handleNavConfirmado}>
         <Text style={styles.customButtonText}>Participar</Text>
       </TouchableOpacity>
+      </ScrollView>
     </SafeAreaView>
   );
 };

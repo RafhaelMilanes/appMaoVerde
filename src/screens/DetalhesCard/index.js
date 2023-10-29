@@ -16,7 +16,7 @@ const DetalhesCard = ({ route, navigation }) => {
         <Image source={item.image} style={styles.cardImage} />
         <Text style={styles.cardTitle}>{item.title}</Text>
         <Text style={styles.cardDescription}>{item.description}</Text>
-        <Button title="Participar" onPress={handleParticipar} />
+        <Button title="Participar" onPress={handleParticipar}   />
       </View>
     );
   };
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#F0F0F0',
+
   },
   cardImage: {
     width: 300,

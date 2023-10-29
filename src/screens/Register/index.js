@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  ScrollView,
+  SafeAreaView
+} from "react-native";
 import { Button } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
 import { Input } from "@rneui/themed";
@@ -20,53 +27,60 @@ const Home = () => {
       source={require("../../../assets/Backgrund.png")}
       style={styles.background}
     >
-      <View style={styles.container}>
-        <Input
-          containerStyle={{ width: "85%", marginTop: 220 }}
-          style={{ color: "white" }}
-          placeholder="E-mail"
-        />
+      <SafeAreaView>
+      <ScrollView>
+        <View style={styles.container}>
+          <Input
+            containerStyle={{ width: "80%"}}
+            style={{ color: "white" }}
+            placeholder="E-mail"
+          />
 
-        <Input
-          containerStyle={{ width: "85%" }}
-          style={{ color: "white" }}
-          placeholder="Senha"
-          secureTextEntry={true}
-        />
+          <Input
+            containerStyle={{ width: "80%" }}
+            style={{ color: "white" }}
+            placeholder="Senha"
+            secureTextEntry={true}
+          />
+        </View>
 
-        <Button
-          title="Login"
-          loading={false}
-          loadingProps={{ size: "small", color: "white" }}
-          buttonStyle={{
-            backgroundColor: "rgba(25, 144, 51, 51)",
-            borderRadius: 5,
-          }}
-          titleStyle={{ fontWeight: "bold", fontSize: 23 }}
-          containerStyle={{
-            marginHorizontal: 15,
-            height: 72,
-            width: 300,
-          }}
-          onPress={() => handleNavRegister()}
-        />
-        <Button
-          title="Cadastrar"
-          loading={false}
-          loadingProps={{ size: "small", color: "white" }}
-          buttonStyle={{
-            backgroundColor: "rgba(25, 144, 51, 51)",
-            borderRadius: 5,
-          }}
-          titleStyle={{ fontWeight: "bold", fontSize: 23 }}
-          containerStyle={{
-            marginHorizontal: 15,
-            height: 72,
-            width: 300,
-          }}
-          onPress={() => handNewUser()}
-        />
-      </View>
+        <View>
+          <Button
+            title="Login"
+            loading={false}
+            loadingProps={{ size: "small", color: "white" }}
+            buttonStyle={{
+              backgroundColor: "rgba(25, 144, 51, 0.51)",
+              borderRadius: 5,
+              width:315,
+            }}
+            titleStyle={{ fontWeight: "bold", fontSize: 23 }}
+            containerStyle={{
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onPress={() => handleNavRegister()}
+          />
+          <Button
+            title="Cadastrar"
+            loading={false}
+            loadingProps={{ size: "small", color: "white" }}
+            buttonStyle={{
+              backgroundColor: "rgba(25, 144, 51, 0.51)",
+              borderRadius: 5,
+              width:315,
+              marginTop:15
+            }}
+            titleStyle={{ fontWeight: "bold", fontSize: 23 }}
+            containerStyle={{
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onPress={() => handNewUser()}
+          />
+        </View>
+      </ScrollView>
+      </SafeAreaView>
     </ImageBackground>
   );
 };
@@ -80,15 +94,9 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    paddingTop: 100,
-    paddingLeft: 42,
-    backgroundColor: "transparent",
-    alignItems: "flex-start",
-  },
-  text: {
-    color: "#fff",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "transparent",
   },
 });
 

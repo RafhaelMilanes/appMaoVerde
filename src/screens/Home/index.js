@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   FlatList,
+  ScrollView
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -81,6 +82,7 @@ const Login = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <View style={styles.buttonPerfil}>
         <TouchableOpacity onPress={() => handleNavRegister()}>
           <Image
@@ -152,6 +154,7 @@ const Login = () => {
           <Text style={{width:226, height:80, marginLeft:15}}>Instituto Brasília Ambiental, vai unir educação ambiental e ação social.Esse ano, o projeto terá como palco o Parque Ecológico.</Text>
         </View>
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -162,7 +165,7 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     paddingTop: 29,
     paddingLeft: 24,
-    fontSize: 48,
+
     backgroundColor: "#132815",
   },
   text: {

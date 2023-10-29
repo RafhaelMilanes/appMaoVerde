@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, ImageBackground } from "react-native";
+import { View, StyleSheet, Text, ImageBackground, ScrollView } from "react-native";
 import { Button } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
 import { Input } from "@rneui/themed";
@@ -16,6 +16,7 @@ const Name = () => {
       source={require("../../../assets/Backgrund.png")}
       style={styles.background}
     >
+      <ScrollView>
       <View style={styles.container}>
         <Text style={styles.text}>Precisamos dos seus dados pessoais</Text>
         <Text style={styles.text1}>
@@ -39,6 +40,7 @@ const Name = () => {
           onPress={() => handName()}
         />
       </View>
+      </ScrollView>
     </ImageBackground>
   );
 };

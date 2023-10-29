@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ImageBackground,
+  ScrollView
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
@@ -88,7 +89,7 @@ function SettingsOrganizador() {
     >
 
       <View >
-      <Text style={{color:"#fff", fontSize:'15', marginBottom:15}}>CBM-DF</Text>
+      <Text style={{color:"#fff", fontSize:15, marginBottom:15}}>CBM-DF</Text>
       <View style={{ flexDirection: 'row',}}>
         <Icon name="phone" size={20} color="#fff" />
         <Text style={{ color: '#fff', marginLeft: 20 }}>(00)00000-0000</Text>
@@ -114,7 +115,7 @@ const DetalhesScreen = ({ route, navigation }) => {
 
     
     <SafeAreaView style={styles.container}>
-
+      
 
       <ImageBackground source={item.image} style={styles.cardImage}>
         <Text style={styles.cardTitle}>{item.title}</Text>
@@ -135,7 +136,7 @@ const DetalhesScreen = ({ route, navigation }) => {
         <Tab.Screen name="Data" component={SettingsData} />
         <Tab.Screen name="Organizador" component={SettingsOrganizador} />
       </Tab.Navigator>
-
+      
       {/* Botão personalizado */}
       <TouchableOpacity
         style={styles.customButton}
@@ -143,6 +144,7 @@ const DetalhesScreen = ({ route, navigation }) => {
       >
         <Text style={styles.customButtonText}>Participar</Text>
       </TouchableOpacity>
+     
     </SafeAreaView>
   );
 };
@@ -164,10 +166,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#ffff",
     marginLeft: 20,
-    marginTop: 300,
+    marginTop: 30,
   },
   customButton: {
-    backgroundColor: "green", // Cor de fundo do botão
+    backgroundColor: "green", 
     borderRadius: 15,
     padding: 10,
     alignItems: "center",

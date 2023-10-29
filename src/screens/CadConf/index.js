@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, ImageBackground, Image } from "react-native";
+import { View, StyleSheet, Text, ImageBackground, Image, ScrollView } from "react-native";
 import { Button } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
 import { Input } from "@rneui/themed";
@@ -12,10 +12,12 @@ const CadConf = () => {
   };
 
   return (
+    
     <ImageBackground
       source={require('../../../assets/Backgrund.png')} 
       style={styles.background}
     >
+      
       <View style={styles.container}>
         <Image style={styles.confirmed} source={require('../../../assets/confirmed.png')} />
         <Text style={styles.text}>Conta criada com sucesso</Text>
@@ -37,6 +39,7 @@ const CadConf = () => {
           onPress={() => Home()}
         />
       </View>
+      
     </ImageBackground>
   );
 };

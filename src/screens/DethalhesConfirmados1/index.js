@@ -1,4 +1,4 @@
-import {View, SafeAreaView, StyleSheet, Image, Text, TouchableOpacity} from 'react-native'
+import {View, SafeAreaView, StyleSheet, Image, Text, TouchableOpacity, ScrollView} from 'react-native'
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 
@@ -18,6 +18,7 @@ const DetalhesConfirmados1 = () => {
 
 
         <SafeAreaView style={styles.container}>
+            <ScrollView>
             <View style={{marginHorizontal: 25}}>
                 <View style={styles.box1}>
                     <TouchableOpacity onPress={handleGoBack}>
@@ -43,10 +44,11 @@ const DetalhesConfirmados1 = () => {
 
                 <TouchableOpacity style={{marginTop: 70}} onPress={() => Cancelar()}>
                     <View style={styles.botao}>
-                        <Text style={{ color: 'white', margin: 5}}>Cancelar Participação</Text>
+                        <Text style={{ color: 'white', margin:1}}>Cancelar Participação</Text>
                     </View>
                 </TouchableOpacity>
             </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
@@ -75,8 +77,9 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         justifyContent: 'center',
         borderRadius: 40,
-        width: 320,
+        width: 300,
         height: 35,
+        marginBottom:30
     }
 }
 )

@@ -1,4 +1,4 @@
-import {View, Text, SafeAreaView, StyleSheet, Image, ImageBackground, TouchableOpacity} from 'react-native'
+import {View, Text, SafeAreaView, StyleSheet, Image, ImageBackground, TouchableOpacity, ScrollView} from 'react-native'
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 
@@ -17,6 +17,7 @@ const ParticipacoesConfirmadas = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <ScrollView>
             <View style={{marginHorizontal: 25}}>
                 <View style={styles.box1}>
                     <TouchableOpacity style={styles.box1_2} >
@@ -26,12 +27,12 @@ const ParticipacoesConfirmadas = () => {
                             <Text style={{color: 'white'}}>Dias</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                     <TouchableOpacity>
                       <Ionicons name="notifications-outline" size={30} color="white" />
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.box2}>
+                {/* <View style={styles.box2}>
                     <Text style={{fontSize: 20, color: 'white', marginLeft:15}}>Confirmações</Text>
                 </View>
 
@@ -49,10 +50,11 @@ const ParticipacoesConfirmadas = () => {
                     <Image style={styles.box3_1} source={require('../../../assets/Box3_Background.png')}/>
                     <Text style={{color: 'white', fontSize: 20, position: 'absolute', top: 110, left: -20}}>Prevênção de Incêndio</Text>
                     <Text style={{color: 'white', fontSize: 10, position: 'absolute', top: 138, left: -20}}>27, Ago, 12h </Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 
                     
             </View>
+            </ScrollView>
         </SafeAreaView>
     );
 }

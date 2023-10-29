@@ -6,6 +6,7 @@ import {
   ImageBackground,
   Text,
   TouchableOpacity,
+  ScrollView
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
@@ -22,7 +23,9 @@ const DetalhesConfirmados = () => {
   };
 
   return (
+    
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <View style={{ marginHorizontal: 25 }}>
         <View style={styles.box1}>
           <TouchableOpacity onPress={handleGoBack}>
@@ -68,7 +71,9 @@ const DetalhesConfirmados = () => {
           </View>
         </TouchableOpacity>
       </View>
+      </ScrollView>
     </SafeAreaView>
+    
   );
 };
 
